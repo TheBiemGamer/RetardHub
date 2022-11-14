@@ -1,4 +1,3 @@
-local Workspace = game:GetService("Workspace")
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("RetardHub | The Maze", "DarkTheme")
 
@@ -51,7 +50,7 @@ ESPSection:NewToggle("Player ESP", "Toggle ESP for players", function(state)
 
     end
 end)
-    
+
 -- Monster ESP
 ESPSection:NewToggle("Monster ESP", "Toggle ESP for monsters", function(state)
     _G.monsteresp = false
@@ -102,7 +101,7 @@ ESPSection:NewToggle("Monster ESP", "Toggle ESP for monsters", function(state)
 
     end
 end)
-    
+
 -- Fullbright
 LightningSection:NewToggle("Fullbright", "Toggle fullbright", function(state)
     local Lightning = game:GetService("Lighting")
@@ -116,11 +115,11 @@ LightningSection:NewToggle("Fullbright", "Toggle fullbright", function(state)
         Lightning.GlobalShadows = true
     end
 end)
-    
+
 -- Misc Tab
 local Misc = Window:NewTab("Misc")
 local FunSection = Misc:NewSection("Fun")
-    
+
 -- Infinite Axe
 FunSection:NewToggle("Infinite Axe", "Toggle infinite axes spawning", function(state)
     _G.infiniteaxe = false
@@ -133,4 +132,17 @@ FunSection:NewToggle("Infinite Axe", "Toggle infinite axes spawning", function(s
     else
         _G.infiniteaxe = false
     end
+
+-- Credits Tab
+local Credits = Window:NewTab("Credits")
+local CreditsSection = Credits:NewSection("Credits")
+
+CreditsSection:NewTextBox("Made by TheBiemGamer and Peter484", "Credits", function(txt)
+	print(txt)
 end)
+
+end)
+
+-- Credits Tab
+local Credits = Window:NewTab("Credits")
+local CreditsSection = Credits:NewSection("Made by TheBiemGamer and Peter484")
