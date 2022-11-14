@@ -132,15 +132,6 @@ FunSection:NewToggle("Infinite Axe", "Toggle infinite axes spawning", function(s
     else
         _G.infiniteaxe = false
     end
-
--- Credits Tab
-local Credits = Window:NewTab("Credits")
-local CreditsSection = Credits:NewSection("Credits")
-
-CreditsSection:NewTextBox("Made by TheBiemGamer and Peter484", "Credits", function(txt)
-	print(txt)
-end)
-
 end)
 
 -- Credits Tab
